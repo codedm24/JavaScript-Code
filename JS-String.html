@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript String Methods</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="text-center display-4">String Variable</div>
+    <div id="str1" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <div class="text-center display-4">single quote inside double quotes</div>
+    <div id="str2" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <div class="text-center display-4">single quote inside double quotes</div>
+    <div id="str3" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <div class="text-center display-4">blackslash inside quoted text</div>
+    <div id="str4" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <div class="text-center display-4">Double quote inside single quotes</div>
+    <div id="str5" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <div class="text-center display-4">Template string</div>
+    <div id="str6" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <script>
+        let text1 = "John Doe";
+        document.getElementById("str1").innerHTML = text1;
+        let text2 = "It's alright";
+        document.getElementById("str2").innerHTML = text2;
+        let text3= "There is 'Johnny' in the house";
+        document.getElementById("str3").innerHTML = text3;
+        let text4 = "The character \\ is called backslash";
+        document.getElementById("str4").innerHTML = text4;
+        let text5 = 'There is "Johnny" in the house';
+        document.getElementById("str5").innerHTML = text5;
+        let text6 = `Html templates support singlequote' and double quote" inside a string`;
+        document.getElementById("str6").innerHTML = text6;
+    </script>
+</body>
+</html>
