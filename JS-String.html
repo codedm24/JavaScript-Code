@@ -22,6 +22,20 @@
     <div id="str5" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
     <div class="text-center display-6" style="font-size: x-large;">template string</div>
     <div id="str6" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold"></div>
+    <div class="text-center display-6" style="font-size: x-large;">String Comparison</div>
+    <div id="str6" style="background-color: cornflowerblue;color: cornsilk;" class="text-center lead text-weight-bold">
+        <div class="text-center">
+            <code class="text-light">
+                let x = "Computer1";</br>
+                let y = new String("Computer2");</br>
+
+                let z = x == y;</br>
+                let r = x === y;</br>
+            </code>
+            <div id="divstringcomparison1" class="bg-info"></div>
+            <div id="divstringcomparison2" class="bg-success"></div>
+        </div>
+    </div>
     <script>
         let text1 = "John Doe";
         document.getElementById("str1").innerHTML = text1;
@@ -35,6 +49,13 @@
         document.getElementById("str5").innerHTML = text5;
         let text6 = `Html templates support singlequote' and double quote" inside a string`;
         document.getElementById("str6").innerHTML = text6;
+
+        let x = "Computer1";
+        let y = new String("Computer1");
+        let z = x == y;
+        let r = x === y;
+        document.getElementById("divstringcomparison1").innerHTML = "z = " + z;
+        document.getElementById("divstringcomparison2").innerHTML = "r = " + r;
     </script>
 </body>
 </html>
