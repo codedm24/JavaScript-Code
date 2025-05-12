@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript String Methods</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container text-center my-3" 
+    style="padding: 2em; border-style: solid; border-color: blue; border-width: 0.1em; border-radius: 0.5em;" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text1.charAt(0)</div>
+                <div id="str1" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text1.charCodeAt(1)</div>
+                <div id="str2" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text1.at(-2)</div>
+                <div id="str3" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text1[2]</div>
+                <div id="str4" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">                    
+                    <div class="row">
+                        <div class="col">text2.slice(4,9)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">text2.slice(10)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col"> text2.slice(-10)</div>
+                    </div>
+                </div>
+                <div class="col-8 text-center led text-weight-bold bg-info text-white">
+                    <div class="row">
+                        <div id="str5" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str6" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str7" class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text2.substring(4,9)</div>
+                <div id="str8" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text2.toLowerCase()</div>
+                <div id="str9" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text2.toUpperCase()</div>
+                <div id="str10" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text2.concat(' ', text3)</div>
+                <div id="str11" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text2.repeat(2)</div>
+                <div id="str12" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text5 = text4.replace('Red', 'Yellow')</div>
+                <div id="str13" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text5 = text4.replaceAll('Red', 'Yellow')</div>
+                <div id="str14" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text4.includes('Red')</div>
+                <div id="str15" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-info text-white">text4.startsWith('Green')</div>
+                <div id="str16" class="col-8 text-center led text-weight-bold bg-secondary text-warning"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-secondary text-warning">text4.endsWith('Blue')</div>
+                <div id="str17" class="col-8 text-center led text-weight-bold bg-info text-white"></div>
+            </div>
+        </div>
+    </div>
+    <!-- <div  style="font-weight: bold;" class="text-center lead text-weight-bold bg-primary text-white">text1.charAt(0)</div>
+    <div id="str1" class="text-center display-6 text-primary" style="font-size: x-large;"></div> -->
+    <!-- <div  style="font-weight: bold;" class="text-center lead text-weight-bold bg-info text-white">text1.charCodeAt(1)</div>
+    <div id="str2" class="text-center display-6 text-info" style="font-size: x-large;"></div> -->
+    <!-- <div  style="font-weight: bold;" class="text-center lead text-weight-bold bg-secondary text-white">text1.at(-2)</div>
+    <div id="str3" class="text-center display-6 text-secondary" style="font-size: x-large;"></div> -->
+    <!-- <div  style="font-weight: bold;" class="text-center lead text-weight-bold bg-body text-dark">text1[2]</div>
+    <div id="str4" class="text-center display-6 text-body" style="font-size: x-large;"></div> -->
+    <!-- <div  style="font-weight: bold;" class="text-center lead text-weight-bold bg-success text-white">text2.slice(4,9), text2.slice(10) text2.slice(-10)</div>
+    <div id="str5" class="text-center display-6 text-success" style="font-size: x-large;"></div>
+    <div id="str6" class="text-center display-6 text-success" style="font-size: x-large;"></div>
+    <div id="str7" class="text-center display-6 text-success" style="font-size: x-large;"></div> -->
+    <script>
+        let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        document.getElementById("str1").innerHTML = text1 + ".charAt(0) = " + text1.charAt(0) + "<br>" ;
+        document.getElementById("str2").innerHTML = text1 + ".charCodeAt(1) = " + text1.charCodeAt(1) + "<br>" ;
+        document.getElementById("str3").innerHTML = text1 + ".at(-2) = " + text1.at(-2) + "<br>" ;
+        document.getElementById("str4").innerHTML = text1 + "[2] = " + text1[2] + "<br>" ;
+        var text2 = "Red Green Blue";
+        document.getElementById("str5").innerHTML = text2 + ".slice(4,9) = " + text2.slice(4,9) + "<br>" ;
+        document.getElementById("str6").innerHTML = text2 + ".slice(10) = " + text2.slice(10) + "<br>" ;
+        document.getElementById("str7").innerHTML = text2 + ".slice(-10) = " + text2.slice(-10) + "<br>" ;
+        document.getElementById("str8").innerHTML = text2 + ".substring(4,9) = " + text2.substring(4,9) + "<br>" ;
+        document.getElementById("str9").innerHTML = text2 + ".toUpperCase() = " + text2.toLowerCase() + "<br>" ;
+        document.getElementById("str10").innerHTML = text2 + ".toUpperCase() = " + text2.toUpperCase() + "<br>" ;
+        let text3 = "Yellow";
+        document.getElementById("str11").innerHTML = text2 + ".concat(' ', text3) = " + text2.concat(' ', text3) + "<br>" ;
+        document.getElementById("str12").innerHTML = text2 + ".repeat(2) = " + text2.repeat(2) + "<br>" ;
+        let text4 = "Red Green Blue";
+        let text5 = text4.replace("Red", 'Yellow');
+        document.getElementById("str13").innerHTML = "text5 = text4.replace('Red', 'Yellow') = " + text5 + "<br>" ;
+        text4 = "Red Green Blue Red";
+        text5 = text4.replaceAll("Red", 'Yellow');
+        document.getElementById("str14").innerHTML = "text5 = text4.replaceAll('Red', 'Yellow') = " + text5 + "<br>" ;
+        text4 = "Red Green Blue";
+        document.getElementById("str15").innerHTML = "text4.includes('Red') = " + text4.includes('Red') + "<br>" ;
+        document.getElementById("str16").innerHTML = "text4.startsWith('Green') = " + text4.startsWith('Green') + "<br>" ;
+        document.getElementById("str17").innerHTML = "text4.endsWith('Blue') = " + text4.endsWith('Blue') + "<br>" ;
+    </script>
+</body>
+</html>
