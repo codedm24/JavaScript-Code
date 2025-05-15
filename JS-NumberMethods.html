@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript String Methods</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container text-center my-3" 
+    style="padding: 2em; border-style: solid; border-color: blue; border-width: 0.1em; border-radius: 0.5em;" >
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-primary text-white">toString()</div>
+                <div id="str1" class="col-8 text-center led text-weight-bold bg-warning text-dark"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-warning text-dark">toExponential()</div>
+                <div id="str2" class="col-8 text-center led text-weight-bold bg-primary text-white"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-primary text-white">toFixed()</div>
+                <div id="str3" class="col-8 text-center led text-weight-bold bg-warning text-dark"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-warning text-dark">toPrecision()</div>
+                <div id="str4" class="col-8 text-center led text-weight-bold bg-primary text-white"></div>
+            </div>
+        </div>
+        
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-primary text-white">valueOf()</div>
+                <div id="str5" class="col-8 text-center led text-weight-bold bg-warning text-dark"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-warning text-dark">                    
+                    <div class="row">
+                        <div class="col">Number()</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col-8 text-center led text-weight-bold bg-primary text-white">
+                    <div class="row">
+                        <div id="str6" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str7" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str8" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str9" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str10" class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-primary text-white">                    
+                    <div class="row">
+                        <div class="col">parseInt()</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col-8 text-center led text-weight-bold bg-warning text-dark">
+                    <div class="row">
+                        <div id="str11" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str12" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str13" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str14" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str15" class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center led text-weight-bold bg-warning text-dark">                    
+                    <div class="row">
+                        <div class="col">parseFloat()</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col-8 text-center led text-weight-bold bg-primary text-white">
+                    <div class="row">
+                        <div id="str16" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str17" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str18" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str19" class="col"></div>
+                    </div>
+                    <div class="row">
+                        <div id="str20" class="col"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script>
+        let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let number1 = 123456789;
+        let number2 = 456.72345;
+        let number3 = 5.17543;
+        document.getElementById("str1").innerHTML = number1 + ".toString() = " + number1.toString() + "<br>" ;
+        document.getElementById("str2").innerHTML = number2 + ".toExponential(2) = " + number2.toExponential(2) + "<br>" ;
+        document.getElementById("str3").innerHTML = number2 + ".toFixed(2) = " + number2.toFixed(2) + "<br>" ;
+        document.getElementById("str4").innerHTML = number3 + ".toPrecision(2) = " + number3.toPrecision(2) + "<br>" ;
+        document.getElementById("str5").innerHTML = number2 + ".valueOf() = " + number2.valueOf() + "<br>" ;
+        document.getElementById("str6").innerHTML = "Number(true) = " + Number(true) + "<br>" ;
+        document.getElementById("str7").innerHTML = "Number(10) = " + Number(10) + "<br>" ;
+        document.getElementById("str8").innerHTML = "Number(\" 10 \") = " + Number("10") + "<br>" ;
+        document.getElementById("str9").innerHTML = "Number(new Date(\"2025-05-15\")) = " + Number(new Date("2025-05-15")) + "<br>" ;
+        document.getElementById("str10").innerHTML = "Number(\"Mike\") = " + Number("Mike") + "<br>" ;
+        document.getElementById("str11").innerHTML = "parseInt(\"-10\") = " + parseInt("-10") + "<br>" ;
+        document.getElementById("str12").innerHTML = "parseInt(\"10.33\") = " + parseInt("10.33") + "<br>" ;
+        document.getElementById("str13").innerHTML = "parseInt(\" 10 20 30 \") = " + parseInt(" 10 20 30 ") + "<br>" ;
+        document.getElementById("str14").innerHTML = "parseInt(new Date(\"2025-05-15\")) = " + parseInt(new Date("2025-05-15")) + "<br>" ;
+        document.getElementById("str15").innerHTML = "parseInt(\"years 10\") = " + parseInt("years 10") + "<br>" ;
+        document.getElementById("str16").innerHTML = "parseFloat(\"-10\") = " + parseFloat("-10") + "<br>" ;
+        document.getElementById("str17").innerHTML = "parseFloat(\"10.33\") = " + parseFloat("10.33") + "<br>" ;
+        document.getElementById("str18").innerHTML = "parseFloat(\" 10 20 30 \") = " + parseFloat(" 10 20 30 ") + "<br>" ;
+        document.getElementById("str19").innerHTML = "parseFloat(new Date(\"2025-05-15\")) = " + parseFloat(new Date("2025-05-15")) + "<br>" ;
+        document.getElementById("str20").innerHTML = "parseFloat(\"years 10\") = " + parseFloat("years 10") + "<br>" ;
+        // var text2 = "Red Green Blue";
+        // document.getElementById("str5").innerHTML = text2 + ".slice(4,9) = " + text2.slice(4,9) + "<br>" ;
+        // document.getElementById("str6").innerHTML = text2 + ".slice(10) = " + text2.slice(10) + "<br>" ;
+        // document.getElementById("str7").innerHTML = text2 + ".slice(-10) = " + text2.slice(-10) + "<br>" ;
+        // document.getElementById("str8").innerHTML = text2 + ".substring(4,9) = " + text2.substring(4,9) + "<br>" ;
+        // document.getElementById("str9").innerHTML = text2 + ".toUpperCase() = " + text2.toLowerCase() + "<br>" ;
+        // document.getElementById("str10").innerHTML = text2 + ".toUpperCase() = " + text2.toUpperCase() + "<br>" ;
+        // let text3 = "Yellow";
+        // document.getElementById("str11").innerHTML = text2 + ".concat(' ', text3) = " + text2.concat(' ', text3) + "<br>" ;
+        // document.getElementById("str12").innerHTML = text2 + ".repeat(2) = " + text2.repeat(2) + "<br>" ;
+        // let text4 = "Red Green Blue";
+        // let text5 = text4.replace("Red", 'Yellow');
+        // document.getElementById("str13").innerHTML = "text5 = text4.replace('Red', 'Yellow') = " + text5 + "<br>" ;
+        // text4 = "Red Green Blue Red";
+        // text5 = text4.replaceAll("Red", 'Yellow');
+        // document.getElementById("str14").innerHTML = "text5 = text4.replaceAll('Red', 'Yellow') = " + text5 + "<br>" ;
+        // text4 = "Red Green Blue";
+        // document.getElementById("str15").innerHTML = "text4.includes('Red') = " + text4.includes('Red') + "<br>" ;
+        // document.getElementById("str16").innerHTML = "text4.startsWith('Green') = " + text4.startsWith('Green') + "<br>" ;
+        // document.getElementById("str17").innerHTML = "text4.endsWith('Blue') = " + text4.endsWith('Blue') + "<br>" ;
+    </script>
+</body>
+</html>
