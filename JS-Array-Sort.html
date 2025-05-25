@@ -68,20 +68,20 @@
             const languages = ["JavaScript", "Python", "Java", "C++", "C#", "Swift"];
             const months = ["January", "February", "March", "April", "May", "June"];
             const numbers = [5, 3, 8, 1, 2];
-            document.getElementById("str1").innerHTML = languages.sort();
-            document.getElementById("str2").innerHTML = languages.reverse();
+            document.getElementById("str1").innerHTML = "languages.sort() => " + languages.sort();
+            document.getElementById("str2").innerHTML = "languages.reverse() => " + languages.reverse();
             let newArr1 = months.toSorted();
-            document.getElementById("str3").innerHTML = newArr1;
+            document.getElementById("str3").innerHTML = "months.toSorted() => " + newArr1;
             let newArr2 = months.toReversed();
-            document.getElementById("str4").innerHTML = newArr2;
+            document.getElementById("str4").innerHTML = "months.toReversed() => " + newArr2;
             numbers.sort((a, b) => a - b);
-            document.getElementById("str5").innerHTML = numbers;
+            document.getElementById("str5").innerHTML = "numbers.sort((a, b) => a - b) => " + numbers;
             numbers.sort((a, b) => b - a);
-            document.getElementById("str6").innerHTML = numbers;
+            document.getElementById("str6").innerHTML = "numbers.sort((a, b) => b - a) => " + numbers;
             let arrayMin = Math.min(...numbers);
             let arrayMax = Math.max(...numbers);
-            document.getElementById("str7").innerHTML = arrayMin;
-            document.getElementById("str8").innerHTML = arrayMax;
+            document.getElementById("str7").innerHTML = "Math.min(...numbers) => " + arrayMin;
+            document.getElementById("str8").innerHTML = "Math.max(...numbers) => " + arrayMax;
 
             const computer1 = {type:"Laptop",model:"AI100",color:"maroon", price: 750};
             const computer2 = {};
@@ -106,7 +106,7 @@
             computers.forEach(item => {
                 computersproperties += `Type: ${item.type}, Model: ${item.model}, Color: ${item.color}, Price: ${item.price}<br/> `
             });
-            document.getElementById("str9").innerHTML = computersproperties;
+            document.getElementById("str9").innerHTML = "computers.sort((a, b) => a.price - b.price) =><br/> " + computersproperties;
             // Sorting by string property
             computersproperties = "";
             // computers.sort((a,b) => 
@@ -122,7 +122,7 @@
             computers.forEach(item =>{
                 computersproperties += `Type: ${item.type}, Model: ${item.model}, Color: ${item.Color}, Price: ${item.price}<br/> `
             });
-            document.getElementById("str10").innerHTML = computersproperties;
+            document.getElementById("str10").innerHTML = "computers.sort((a, b) => a.type.localeCompare(b.type)) =><br/> " + computersproperties;
         </script>
     </body>
 </html>

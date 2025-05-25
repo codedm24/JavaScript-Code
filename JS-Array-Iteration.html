@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>JavaScript Array Iteration</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid text-center my-3 bg-warning"
+        style="padding: 2em; border-style: solid; border-width: 0.1em; border-color: chartreuse; border-radius: 0.5em;">
+            <div class="md-6 bg-dark">
+                <code>
+                    const languages = ["JavaScript", "Python", "Java", "C++", "C#", "Swift"];
+                    <br/>
+                    const months = ["January", "February", "March", "April", "May", "June"];
+                    <br/>
+                    const numbers = [5, 3, 8, 1, 2];
+                </code>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-success text-light">Array.forEach</div>
+                    <div id="str1" class="col-8 text-center lead font-weight-normal bg-light text-dark"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-light text-dark">Array.map</div>
+                    <div id="str2" class="col-8 text-center lead font-weight-normal bg-success text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-success text-light">Array.flatMap</div>
+                    <div id="str3" class="col-8 text-center lead font-weight-normal bg-light text-dark"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-light text-dark">Array.filter</div>
+                    <div id="str4" class="col-8 text-center lead font-weight-normal bg-success text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-success text-light">Array.reduce</div>
+                    <div id="str5" class="col-8 text-center lead font-weight-normal bg-light text-dark"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-light text-dark">Array.every</div>
+                    <div id="str6" class="col-8 text-center lead font-weight-normal bg-success text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-success text-light">Array.some</div>
+                    <div id="str7" class="col-8 text-center lead font-weight-normal bg-light text-dark"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-light text-dark">Array.from</div>
+                    <div id="str8" class="col-8 text-center lead font-weight-normal bg-success text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-success text-light">Array.keys</div>
+                    <div id="str9" class="col-8 text-center lead font-weight-normal bg-light text-dark"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-light text-dark">Array.entries()</div>
+                    <div id="str10" class="col-8 text-center lead font-weight-normal bg-success text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-success text-light">Array.with</div>
+                    <div id="str11" class="col-8 text-center lead font-weight-normal bg-light text-dark"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-light text-dark">Array.spread</div>
+                    <div id="str12" class="col-8 text-center lead font-weight-normal bg-success text-light"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const languages = ["JavaScript", "Python", "Java", "C++", "C#", "Swift"];
+            const months = ["January", "February", "March", "April", "May", "June"];
+            const numbers = [5, 3, 8, 1, 2];
+
+            // Using forEach to iterate over the languages array
+            let output = "";
+            languages.forEach((language, index) => {
+                output += `Language ${index + 1}: ${language}<br/>`;
+            });
+            document.getElementById("str1").innerHTML = "let output = '';<br/>languages.forEach((item, index) => {<br/> " +
+              "  output += `Language ${index + 1}: ${item}<br/>`; " +
+            "});<br/>" + output;
+            let newArr1;
+            // Using map to create a new array with the lengths of each language
+            newArr1 = languages.map((language,index) => `Language ${index+1}: ` + language);
+            document.getElementById("str2").innerHTML = "languages.map((language,index) => `Language ${index+1}: ` + language) =><br/>" + newArr1.join(",<br/> ");
+
+            let newArr2;
+            newArr2 = numbers.flatMap((num) => [num, num * 2]);
+            document.getElementById("str3").innerHTML = "numbers.flatMap((num) => [num, num * 2]) =><br/>" + newArr2.join(",<br/> ");
+
+            let newArr3;
+            newArr3 = months.filter((month) => month.startsWith('J'));
+            document.getElementById("str4").innerHTML = "months.filter((month) => month.startsWith('J')) =><br/>" + newArr3.join(",<br/> ");
+        
+            let total = 0;
+            // Using reduce to calculate the total of the numbers array
+            total = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            document.getElementById("str5").innerHTML = "numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0) =><br/>" + total;
+        
+            let allItemPassed;
+            allItemPassed = numbers.every((num) => num > 2);
+            document.getElementById("str6").innerHTML = "numbers.every((num) => num > 2) =><br/>" + allItemPassed;
+
+            let someItemPassed;
+            someItemPassed = numbers.some((num) => num < 2);
+            document.getElementById("str7").innerHTML = "numbers.some((num) => num < 2) =><br/>" + someItemPassed;
+
+            let arrayObject1 = null;
+            let arrayObject2 = null;
+            arrayObject1 = Array.from("ABCDEFGH");
+            arrayObject2 = Array.from({ length: 5 }, (_, i) => ({ id: i + 1, value: `Item ${i + 1}` }));
+            document.getElementById("str8").innerHTML = "Array.from('ABCDEFGH') =><br/>" + JSON.stringify(arrayObject1) + "<br/>" +
+                "Array.from({ length: 5 }, (_, i) => ({ id: i + 1, value: `Item ${i + 1}` })) =><br/>" + JSON.stringify(arrayObject2);
+            //document.getElementById("str8").innerHTML = "Array.from({ length: 5 }, (_, i) => ({ id: i + 1, value: `Item ${i + 1}` })) =><br/>" + JSON.stringify(arrayObject);
+        
+            document.getElementById("str9").innerHTML = "languages.keys()=><br/>" + Array.from(languages.keys()).join(",<br/> ");
+
+            let monthsAll = "";
+            months.entries().forEach(([index, month]) => {
+                monthsAll += (`Month ${index + 1}: ${month}<br/>`);
+            });
+
+            document.getElementById("str10").innerHTML = "months.entries().forEach(([index, month]) => {<br/>" +
+                "  monthsAll += (`Month ${index + 1}: ${month}`);<br/>" +
+                "});<br/>" + monthsAll;
+            
+            let newArr4 = languages.with(2, "TypeScript");
+            document.getElementById("str11").innerHTML = "languages.with('TypeScript') =><br/>" + newArr4.join(",<br/> ");
+
+            let spreadArray = [...languages, ...months, ...numbers];
+            document.getElementById("str12").innerHTML = "[...languages, ...months, ...numbers] =><br/>" + spreadArray.join(",<br/> ");
+        </script>
+    </body>
+</html>
