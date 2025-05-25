@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>JavaScript Array Sort</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+         <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid text-center my-3 bg-secondary"
+        style="padding: 2em; border-style: solid; border-width: 0.1em; border-color: chartreuse; border-radius: 0.5em;">
+            <div class="md-6 bg-light">
+                <code>
+                    const languages = ["JavaScript", "Python", "Java", "C++", "C#", "Swift"];
+                    <br/>
+                    const months = ["January", "February", "March", "April", "May", "June"];
+                    <br/>
+                    const numbers = [5, 3, 8, 1, 2];
+                </code>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-danger text-light">Array.sort</div>
+                    <div id="str1" class="col-8 text-center lead font-weight-normal bg-info text-light">AA</div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-info text-light">Array.reverse</div>
+                    <div id="str2" class="col-8 text-center lead font-weight-normal bg-danger text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-danger text-light">Array.toSorted</div>
+                    <div id="str3" class="col-8 text-center lead font-weight-normal bg-info text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-info text-light">Array.toReversed</div>
+                    <div id="str4" class="col-8 text-center lead font-weight-normal bg-danger text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-danger text-light">Array.sort numeric ascending</div>
+                    <div id="str5" class="col-8 text-center lead font-weight-normal bg-info text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-info text-light">Array.sort numeric descending</div>
+                    <div id="str6" class="col-8 text-center lead font-weight-normal bg-danger text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-danger text-light">Math.Min(array)</div>
+                    <div id="str7" class="col-8 text-center lead font-weight-normal bg-info text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-info text-light">Math.Max(array)</div>
+                    <div id="str8" class="col-8 text-center lead font-weight-normal bg-danger text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-danger text-light">object Array sort by numeric property</div>
+                    <div id="str9" class="col-8 text-center lead font-weight-normal bg-info text-light"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 text-center lead font-weight-normal bg-info text-light">object Array sort by string property</div>
+                    <div id="str10" class="col-8 text-center lead font-weight-normal bg-danger text-light"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const languages = ["JavaScript", "Python", "Java", "C++", "C#", "Swift"];
+            const months = ["January", "February", "March", "April", "May", "June"];
+            const numbers = [5, 3, 8, 1, 2];
+            document.getElementById("str1").innerHTML = languages.sort();
+            document.getElementById("str2").innerHTML = languages.reverse();
+            let newArr1 = months.toSorted();
+            document.getElementById("str3").innerHTML = newArr1;
+            let newArr2 = months.toReversed();
+            document.getElementById("str4").innerHTML = newArr2;
+            numbers.sort((a, b) => a - b);
+            document.getElementById("str5").innerHTML = numbers;
+            numbers.sort((a, b) => b - a);
+            document.getElementById("str6").innerHTML = numbers;
+            let arrayMin = Math.min(...numbers);
+            let arrayMax = Math.max(...numbers);
+            document.getElementById("str7").innerHTML = arrayMin;
+            document.getElementById("str8").innerHTML = arrayMax;
+
+            const computer1 = {type:"Laptop",model:"AI100",color:"maroon", price: 750};
+            const computer2 = {};
+            computer2.type = "Server";
+            computer2.model = "ZI200";
+            computer2.color = "black";
+            computer2.price = 850;
+            const computer3 = new Object();
+            computer3.type = "Desktop";
+            computer3.model = "DZ500";
+            computer3.color = "Gray";
+            computer3.price = 950;
+            const computer4 = new Object();
+            computer4.type = "Tablet";
+            computer4.model = "TZ500";
+            computer4.color = "Red";
+            computer4.price = 900;
+            // Sorting by numeric property
+            const computers = [computer1, computer2, computer3, computer4];
+            computers.sort((a, b) => a.price - b.price);
+            let computersproperties = "";
+            computers.forEach(item => {
+                computersproperties += `Type: ${item.type}, Model: ${item.model}, Color: ${item.color}, Price: ${item.price}<br/> `
+            });
+            document.getElementById("str9").innerHTML = computersproperties;
+            // Sorting by string property
+            computersproperties = "";
+            // computers.sort((a,b) => 
+            // {
+            //     let x = a.type.toLowerCase();
+            //     let y = b.type.toLowerCase();
+            //     if (x < y) { return -1; }
+            //     if (x > y) { return 1; }
+            //     return 0;
+            // });
+            computers.sort((a, b) => a.type.localeCompare(b.type));
+            
+            computers.forEach(item =>{
+                computersproperties += `Type: ${item.type}, Model: ${item.model}, Color: ${item.Color}, Price: ${item.price}<br/> `
+            });
+            document.getElementById("str10").innerHTML = computersproperties;
+        </script>
+    </body>
+</html>
