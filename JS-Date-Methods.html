@@ -74,8 +74,44 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-4 text-center lead font-weight-bold bg-light text-primary">getTimezoneOffset()</div>
+                <div class="col-4 text-center lead font-weight-bold bg-light text-primary">Date.getTimezoneOffset()</div>
                 <div id="display11" class="col-8 text-center lead font-weight-bold bg-secondary text-light"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center lead font-weight-bold bg-secondary text-light">Date.setFullYear(yyyy)</div>
+                <div id="display12" class="col-8 text-center lead font-weight-bold bg-light text-primary"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center lead font-weight-bold bg-light text-primary">Date.setMonth(mm)</div>
+                <div id="display13" class="col-8 text-center lead font-weight-bold bg-secondary text-light"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center lead font-weight-bold bg-secondary text-light">Date.setDate(dd)</div>
+                <div id="display14" class="col-8 text-center lead font-weight-bold bg-light text-primary"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center lead font-weight-bold bg-light text-primary">Date.setHours(HH)</div>
+                <div id="display15" class="col-8 text-center lead font-weight-bold bg-secondary text-light"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center lead font-weight-bold bg-secondary text-light">Date.setMinutes(MM)</div>
+                <div id="display16" class="col-8 text-center lead font-weight-bold bg-light text-primary"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-4 text-center lead font-weight-bold bg-light text-primary">Date.setSeconds(SS)</div>
+                <div id="display17" class="col-8 text-center lead font-weight-bold bg-secondary text-light"></div>
             </div>
         </div>
     </div>
@@ -96,6 +132,18 @@
         document.getElementById("display9").innerHTML = date.getTime(); // Returns the number of milliseconds since January 1, 1970
         document.getElementById("display10").innerHTML = Date.now(); // Returns the current timestamp in milliseconds
         document.getElementById("display11").innerHTML = date.getTimezoneOffset() + " minutes"; // Returns the difference in minutes between UTC and local time
+        date.setFullYear(2026);
+        document.getElementById("display12").innerHTML = date;
+        date.setMonth(0); // December
+        document.getElementById("display13").innerHTML = date;
+        date.setDate(15); // Set to the 15th of the month
+        document.getElementById("display14").innerHTML = date;
+        date.setHours(10); // Set to 10 AM
+        document.getElementById("display15").innerHTML = date;
+        date.setMinutes(30); // Set to 30 minutes past the hour
+        document.getElementById("display16").innerHTML = date;
+        date.setSeconds(45); // Set to 45 seconds past the minute
+        document.getElementById("display17").innerHTML = date;
     </script>
 </body>
 </html>
